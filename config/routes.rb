@@ -1,12 +1,23 @@
 PropManage::Application.routes.draw do
-  get "static_pages/home"
-
-  get "static_pages/contact"
+ # get "users/new"
+  match '/signup', to: 'users#new' # points to signup_path
+ 
+ # get "static_pages/home"
+ # match "/", to: 'static_pages#home'
+  root :to => 'static_pages#home' # deleted public/index.html
   
-  get "static_pages/about"
+ # get "static_pages/contact"
+  match '/contact', to: 'static_pages#contact' # points to contact_path
   
-  get "static_pages/test"
-
+ # get "static_pages/about"
+  match '/about', to: 'static_pages#about'
+  
+ # get "static_pages/test"
+  match '/test', to: 'static_pages#test' 
+  
+ # get "static_pages/services"
+  match '/services', to: 'static_pages#services'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

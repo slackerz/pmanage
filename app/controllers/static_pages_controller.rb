@@ -11,6 +11,10 @@ class StaticPagesController < ApplicationController
   	@title = "about"
   end 
   
+  def services
+  	
+  end
+  
   def test
   end
   
